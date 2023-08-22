@@ -2,17 +2,15 @@
 
 - Template para construção de API's
 - Tecnologias utilizadas:
+  Typescript
+  TypeORM
+  Express
+  Uuid
 
-- Typescript
-- TypeORM
-- Express
-- Uuid
-
-- Ferramentas instaladas e configuradas
-
-- Redis
-- JSON Web Token
-- Jest
+- Ferramentas instaladas e configuradas:
+  Redis
+  JSON Web Token
+  Jest
 
 - Conceitos básicos de arquitetura aplicados
 
