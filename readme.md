@@ -82,10 +82,12 @@ Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e c
 Código gerado para um model utilizando as opções da imagem anterior<br>
 
 ## Importante!
+- Não é gerado nenhum código para UseCase<br>
+
 - O código gerado para a entity não faz os relacionamentos, estes precisam ser configurados usando os métodos do TypeORM<br>
 ![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/12258356-286b-4966-9f4d-5d58c313572d)
 
-
-- Não é gerado nenhum código para UseCase
-- O código do routes não é gerado com nenhum middleware, estes precisam ser adicionados caso necessários
 - O Controller gerado precisa ser alterado para chamar os useCases corretos
+![exc6](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/6368f919-9520-4e06-b158-68e36448000c)
+
+- O código do routes não é gerado com nenhum middleware, estes precisam ser adicionados caso necessários
