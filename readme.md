@@ -84,6 +84,7 @@ Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e c
 - Não é gerado nenhum código para UseCase<br>
 - Redis está configurado e pronto para uso, deve ser configurado nos useCases da aplicação
 - Jest está configurado e pronto para uso, mas nenhum teste foi criado
+- JSON Web Token está configurado e pronto para uso
 
 - O código gerado para a entity não faz os relacionamentos, estes precisam ser configurados usando os métodos do TypeORM<br>
   ![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/2208863b-acd0-4ebe-b393-88b2799d5866)
