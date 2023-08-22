@@ -31,7 +31,8 @@ Para usar siga estes passos:
 
 - Primeiro crie um arquivo .env e complete com as informações do seu projeto, seguindo o exemplo contido no .env.example <br>
 
-![exc3](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/207c650e-ae2e-4505-9e28-bb45b2e89407)<br>
+![exc3](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/b3bb8ae6-74c5-409d-aefc-28d88269b5e1)
+
 
 - Executar o comando para testar as conexões com os bancos de dados<br>
 
@@ -41,12 +42,12 @@ npm run dev
 
 Se as conexões derem certo aparecerá a mensagem no terminal:<br>
 
-![exc4](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/a6060e32-97e3-4d1f-9859-e11555d47b1d)
+![exc4](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/139c0b5d-0d45-4218-9497-62734a38d864)
 
 - Dentro da pasta src/app/features tem uma pasta com o exemplo de arquitetura<br>
   A pasta pode ser copiada e renomeada de acordo com as features do projeto<br>
 
-  ![exc5](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/c2c9015e-19c6-42ad-a6b1-ad74a9d198ac)
+![exc5](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/3e41497a-c405-41b5-8bbd-6362d8673713)
 
 ## ☕ Utilizando a planilha excel para gerar os códigos base
 
@@ -72,11 +73,11 @@ E por último a opção "PK" refere-se a propriedade que será o identificador �
 
 No campo "Config Entity" podem ser marcados para incluir as propriedades de data de criação e atualização na tabela do banco de dados<br>
 
-![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/ec6357f6-b1a1-449f-a7d9-8ce36699700e)<br>
+![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/5f5e2401-fb9d-4b50-b123-8de876261611)
 
 Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e colados em um arquivo .ts<br>
 
-![exc2](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/93ca3951-2835-49f2-9c68-feaf9679e56b)
+![exc2](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/253c9e28-e075-469b-9cd9-633874b1cf6b)
 
 ## Importante!
 
@@ -85,16 +86,16 @@ Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e c
 - Jest está configurado e pronto para uso, mas nenhum teste foi criado
 
 - O código gerado para a entity não faz os relacionamentos, estes precisam ser configurados usando os métodos do TypeORM<br>
-  ![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/12258356-286b-4966-9f4d-5d58c313572d)
+  ![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/2208863b-acd0-4ebe-b393-88b2799d5866)
 
 - O Controller gerado precisa ser alterado para chamar os useCases corretos<br>
-  ![exc6](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/6368f919-9520-4e06-b158-68e36448000c)
+  ![exc6](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/e9e158cc-a3b4-454b-9572-f9561a2d6a0e)
 
 - O código do routes não é gerado com nenhum middleware, estes precisam ser adicionados caso necessários<br>
-  ![exc10](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/5cdf6739-40ce-4307-b23e-38f54802a6ab)
+  ![exc10](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/ad0fc571-f6fb-427d-afc3-15b8521c8484)
 
 - No código do repository precisam ser corrigidos os imports e adicionados métodos de acordo com o projeto<br>
-  ![exc9](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/9dd4afd0-1578-4d21-af42-548f7e5f98a8)
+  ![exc9](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/8140470a-a4ac-43ea-951d-67c0f0a5dc98)
 
 - Exemplo de model criado<br>
-  ![exc8](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/6f1d5f64-bb3d-4b30-8383-ef4c019f3877)
+  ![exc8](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/e6e28e5f-942f-40ee-a1e9-1f28e929332c)
