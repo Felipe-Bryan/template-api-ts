@@ -79,15 +79,23 @@ Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e c
 
 ![exc2](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/93ca3951-2835-49f2-9c68-feaf9679e56b)
 
-Código gerado para um model utilizando as opções da imagem anterior<br>
-
 ## Importante!
 - Não é gerado nenhum código para UseCase<br>
+- Redis está pronto para uso deve ser configurado nos useCases da aplicação
+- Jest está configurado e pronto para uso, mas nenhum teste foi criado
 
 - O código gerado para a entity não faz os relacionamentos, estes precisam ser configurados usando os métodos do TypeORM<br>
 ![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/12258356-286b-4966-9f4d-5d58c313572d)
 
-- O Controller gerado precisa ser alterado para chamar os useCases corretos
+- O Controller gerado precisa ser alterado para chamar os useCases corretos<br>
 ![exc6](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/6368f919-9520-4e06-b158-68e36448000c)
 
-- O código do routes não é gerado com nenhum middleware, estes precisam ser adicionados caso necessários
+- O código do routes não é gerado com nenhum middleware, estes precisam ser adicionados caso necessários<br>
+![exc10](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/5cdf6739-40ce-4307-b23e-38f54802a6ab)
+
+- No código do repository precisam ser corrigidos os imports e adicionados métodos de acordo com o projeto<br>
+![exc9](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/9dd4afd0-1578-4d21-af42-548f7e5f98a8)
+
+- Exemplo de model criado<br>
+![exc8](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/6f1d5f64-bb3d-4b30-8383-ef4c019f3877)
+
