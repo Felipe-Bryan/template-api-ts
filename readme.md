@@ -33,6 +33,11 @@ Para usar siga estes passos:
 
 ![exc3](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/b3bb8ae6-74c5-409d-aefc-28d88269b5e1)
 
+- Na pasta src/main/config, no arquivo database.config.ts altere a propriedade "schema" para o schema correto da aplicação<br>
+
+![exc11](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/16aa2c23-92b0-4456-9613-cb0c9728a106)
+
+
 
 - Executar o comando para testar as conexões com os bancos de dados<br>
 
@@ -66,7 +71,7 @@ Na Tabela à esquerda (set, get) deve ser marcado com x as propriedades que ter�
 
 Na mesma a opção toJson deve ser marcada para as propriedades que serão ao método toJson()<br>
 ---Este método é chamado em rotas que fazem a listagem de usuários por exemplo <br>
--neste exemplo não seria interessante incluir senha ou outra informação sensível pois esta ficaria visível a quem acesse a rota de get<br>
+-neste exemplo não seria interessante incluir senha ou outra informação sensível pois esta ficaria visível a quem acessar rota de "get"<br>
 -este método também altera o visual do que é exibido, removendo as "\_" do nome das propriedades (\_id => id)<br>
 
 E por último a opção "PK" refere-se a propriedade que será o identificador único na tabela do banco de dados<br>
@@ -78,6 +83,25 @@ No campo "Config Entity" podem ser marcados para incluir as propriedades de data
 Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e colados em um arquivo .ts<br>
 
 ![exc2](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/253c9e28-e075-469b-9cd9-633874b1cf6b)
+
+- É recomendado gerar migrations sempre que uma entity é adicionada ao projeto ou alterada<br>
+Para gerar a migration execute o comando no terminal:
+
+```
+npm run typeorm:generate src/app/database/migrations/[Nome da migration]
+```
+
+Ou se o projeto não seguir a mesma estrutura de pastas do template, mude para o caminho para a pasta que contenha as migrations<br>
+
+```
+npm run typeorm:generate [path]/[Nome da migration]
+```
+
+Após gerar a migration, execute-a:
+
+```
+npm run typeorm:run
+```
 
 ## Importante!
 
@@ -100,3 +124,11 @@ Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e c
 
 - Exemplo de model criado<br>
   ![exc8](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/e6e28e5f-942f-40ee-a1e9-1f28e929332c)
+  
+## Finalizações
+
+- Adicionar no arquivo express.config.ts as rotas criadas:<br>
+![exc12](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/525702f1-654f-479f-ae5c-fc8dcc314a98)
+
+- Alterar o nome do projeto nos arquivos package.json e package-lock.json:<br>
+![exc13](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/e187b696-585c-49d0-9fdc-620f98dd0706)
