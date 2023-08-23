@@ -111,6 +111,7 @@ npm run typeorm:run
 - JSON Web Token está configurado e pronto para uso.
 
 - O código gerado para a entity não faz os relacionamentos, estes precisam ser configurados usando os métodos do TypeORM<br>
+  Caso haja necessidade de alterar o nome da tabela, altere no código gerado, não faça alterações nos campos automáticos da planilha pois farão com que o código gerador seja apagado
   ![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/2208863b-acd0-4ebe-b393-88b2799d5866)
 
 - O Controller gerado precisa ser alterado para chamar os useCases corretos<br>
