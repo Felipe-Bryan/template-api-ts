@@ -97,7 +97,7 @@ Ou se o projeto não seguir a mesma estrutura de pastas do template, mude para o
 npm run typeorm:generate [path]/[Nome da migration]
 ```
 
-Após gerar a migration, execute-a:
+Após gerar a migration, execute-a para manter o banco de dados de acordo com a necessidade do projeto
 
 ```
 npm run typeorm:run
