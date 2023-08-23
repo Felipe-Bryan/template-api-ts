@@ -78,7 +78,10 @@ E por último a opção "PK" refere-se a propriedade que será o identificador �
 
 No campo "Config Entity" podem ser marcados para incluir as propriedades de data de criação e atualização na tabela do banco de dados<br>
 
-![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/5f5e2401-fb9d-4b50-b123-8de876261611)
+Caso haja necessidade de alterar o nome da tabela, altere no código gerado, não faça alterações nos campos automáticos da planilha pois farão com que o código gerador seja apagado.<br>
+Faça alterações somente nos campos com fundo preto da aba "Entry".
+
+![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/a1ce1db3-8875-4066-9a68-fee267c9c697)
 
 Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e colados em um arquivo ".ts"<br>
 
@@ -111,7 +114,6 @@ npm run typeorm:run
 - JSON Web Token está configurado e pronto para uso.
 
 - O código gerado para a entity não faz os relacionamentos, estes precisam ser configurados usando os métodos do TypeORM<br>
-  Caso haja necessidade de alterar o nome da tabela, altere no código gerado, não faça alterações nos campos automáticos da planilha pois farão com que o código gerador seja apagado
   ![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/2208863b-acd0-4ebe-b393-88b2799d5866)
 
 - O Controller gerado precisa ser alterado para chamar os useCases corretos<br>
