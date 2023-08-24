@@ -110,23 +110,31 @@ npm run typeorm:run
 - Jest está configurado e pronto para uso, mas nenhum teste é criado automaticamente.
 - JSON Web Token está configurado e pronto para uso.
 
+##
 - O código gerado para a entity não faz os relacionamentos, estes precisam ser configurados usando os métodos do TypeORM<br>
-  ![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/2208863b-acd0-4ebe-b393-88b2799d5866)
+![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/2208863b-acd0-4ebe-b393-88b2799d5866)
 
+  ##
 - O Controller gerado precisa ser alterado para chamar os useCases corretos<br>
-  ![exc6](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/e9e158cc-a3b4-454b-9572-f9561a2d6a0e)
+![exc6](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/e9e158cc-a3b4-454b-9572-f9561a2d6a0e)
 
+  ##
 - O código do routes não é gerado com nenhum middleware, estes precisam ser adicionados caso necessários<br>
-  ![exc10](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/ad0fc571-f6fb-427d-afc3-15b8521c8484)
-
+![exc10](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/ad0fc571-f6fb-427d-afc3-15b8521c8484)
+  
+##
 - No código do repository precisam ser corrigidos os imports e adicionados métodos de acordo com o projeto<br>
-  ![exc9](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/8140470a-a4ac-43ea-951d-67c0f0a5dc98)
+![exc9](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/8140470a-a4ac-43ea-951d-67c0f0a5dc98)
 
+##
 - Os códigos criados para useCase são apenas uma base e devem ser complementados de acordo com o projeto<br>
+Exemplo de usecase gerado com a planilha<br>
 
+![exc14](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/5f916e3a-9094-4a2a-a71f-da5f5598baff)
 
+##
 - Exemplo de model criado<br>
-  ![exc8](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/e6e28e5f-942f-40ee-a1e9-1f28e929332c)
+![exc8](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/e6e28e5f-942f-40ee-a1e9-1f28e929332c)
   
 ## Finalizações
 
