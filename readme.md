@@ -27,8 +27,6 @@ npm install
 
 ## ☕ Usando o Template
 
-Para usar siga estes passos:
-
 - Primeiro crie um arquivo .env e complete com as informações do seu projeto, seguindo o exemplo contido no .env.example:<br>
 
 ![exc3](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/b3bb8ae6-74c5-409d-aefc-28d88269b5e1)
@@ -36,8 +34,6 @@ Para usar siga estes passos:
 - Na pasta src/main/config, no arquivo database.config.ts altere a propriedade "schema" para o schema correto da aplicação:<br>
 
 ![exc11](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/16aa2c23-92b0-4456-9613-cb0c9728a106)
-
-
 
 - Executar o comando para testar as conexões com os bancos de dados:<br>
 
@@ -84,8 +80,10 @@ Faça alterações somente nos campos com fundo preto da aba "Entry".
 ![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/a1ce1db3-8875-4066-9a68-fee267c9c697)
 
 Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e colados em um arquivo ".ts"<br>
+Selecionar o campo com fundo preto do arquivo a ser copiado, pressionar CTRL+C e colar dentro de um arquivo ".ts"<br>
+À direita é gerado uma sugestão para o nome do arquivo
 
-![exc2](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/253c9e28-e075-469b-9cd9-633874b1cf6b)
+![exc2](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/b8d5d596-b8a5-4fe4-89fa-00db67a9898b)
 
 - É recomendado gerar migrations sempre que uma entity é adicionada ao projeto ou alterada.<br>
 Para gerar a migration execute o comando no terminal:
@@ -108,7 +106,6 @@ npm run typeorm:run
 
 ## Importante!
 
-- Não é gerado nenhum código para UseCase.
 - Redis está configurado e pronto para uso, deve ser configurado nos useCases da aplicação.
 - Jest está configurado e pronto para uso, mas nenhum teste é criado automaticamente.
 - JSON Web Token está configurado e pronto para uso.
@@ -124,6 +121,9 @@ npm run typeorm:run
 
 - No código do repository precisam ser corrigidos os imports e adicionados métodos de acordo com o projeto<br>
   ![exc9](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/8140470a-a4ac-43ea-951d-67c0f0a5dc98)
+
+- Os códigos criados para useCase são apenas uma base e devem ser complementados de acordo com o projeto<br>
+
 
 - Exemplo de model criado<br>
   ![exc8](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/e6e28e5f-942f-40ee-a1e9-1f28e929332c)
