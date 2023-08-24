@@ -120,7 +120,7 @@ npm run typeorm:run
 
   ##
 - O código do routes não é gerado com nenhum middleware, estes precisam ser adicionados caso necessários<br>
-![exc10](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/ad0fc571-f6fb-427d-afc3-15b8521c8484)
+![exc10](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/ba82f306-bdc6-4f49-96b7-f27928b009c5)
   
 ##
 - No código do repository precisam ser corrigidos os imports e adicionados métodos de acordo com o projeto<br>
