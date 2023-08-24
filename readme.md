@@ -89,7 +89,7 @@ Selecionar o campo com fundo preto do arquivo a ser copiado, pressionar CTRL+C e
 Para gerar a migration execute o comando no terminal:
 
 ```
-npm run typeorm:generate src/app/database/migrations/[Nome da migration]
+npm run typeorm:generate src/app/shared/database/migrations/[Nome da migration]
 ```
 
 Ou se o projeto não seguir a mesma estrutura de pastas do template, mude para o caminho para a pasta que contenha as migrations:<br>
