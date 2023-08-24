@@ -116,7 +116,7 @@ npm run typeorm:run
 
   ##
 - O Controller gerado precisa ser alterado para chamar os useCases corretos<br>
-![exc6](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/e9e158cc-a3b4-454b-9572-f9561a2d6a0e)
+![exc6](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/9af48a1b-ff01-4ecc-bd0f-b9f0bf4a2417)
 
   ##
 - O código do routes não é gerado com nenhum middleware, estes precisam ser adicionados caso necessários<br>
