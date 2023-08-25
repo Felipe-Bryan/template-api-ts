@@ -11,16 +11,28 @@ if (process.env.DB_ENV === 'production') {
   migrations = ['build/app/shared/database/migrations/**/*.js'];
 }
 
-const config = new DataSource({
-  type: 'postgres',
-  url: process.env.DB_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
-  synchronize: false,
-  schema: 'schema-name',
-  entities,
-  migrations,
-});
+let config;
+
+if (process.env.DB_ENV === 'test') {
+  config = new DataSource({
+    type: 'sqlite',
+    database: 'db.sqlite3',
+    synchronize: false,
+    entities,
+    migrations: ['tests/app/shared/database/migrations/**/*.ts'],
+  });
+} else {
+  config = new DataSource({
+    type: 'postgres',
+    url: process.env.DB_URL,
+    ssl: {
+      rejectUnauthorized: false,
+    },
+    synchronize: false,
+    schema: 'schema-name',
+    entities,
+    migrations,
+  });
+}
 
 export default config;
