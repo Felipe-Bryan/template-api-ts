@@ -31,9 +31,11 @@ npm install
 
 ![exc3](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/b3bb8ae6-74c5-409d-aefc-28d88269b5e1)
 
-- Na pasta src/main/config, no arquivo database.config.ts altere a propriedade "schema" para o schema correto da aplicação:<br>
+- No src/main/config/database.config.ts estão as configurações de banco de dados<br>
+1 - as configurações do banco de dados de testes<br>
+2 - as configurações do banco de dados de produção<br>
 
-![exc11](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/16aa2c23-92b0-4456-9613-cb0c9728a106)
+![exc19](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/d5ffe45e-d5dd-4404-b171-062066bd69a1)
 
 - Executar o comando para testar as conexões com os bancos de dados:<br>
 
