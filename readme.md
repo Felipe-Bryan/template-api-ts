@@ -124,7 +124,7 @@ npm run typeorm:run
 
 - Ambiente de testes está configurado para testes unitários e integrados( Jest/supertest ), nenhum teste é gerado automaticamente.
 
-- Redis está configurado e pronto para uso, deve ser configurado nos useCases da aplicação.
+- Redis está configurado e pronto para uso, deve ser executado nos useCases de acordo com as regras do projeto.
 
 - JSON Web Token está configurado e pronto para uso.
 
