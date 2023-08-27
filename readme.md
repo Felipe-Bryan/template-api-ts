@@ -31,9 +31,11 @@ npm install
 
 ![exc3](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/b3bb8ae6-74c5-409d-aefc-28d88269b5e1)
 
-- Na pasta src/main/config, no arquivo database.config.ts altere a propriedade "schema" para o schema correto da aplicação:<br>
+- No src/main/config/database.config.ts estão as configurações de banco de dados<br>
+1 - as configurações do banco de dados de testes<br>
+2 - as configurações do banco de dados de produção<br>
 
-![exc11](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/16aa2c23-92b0-4456-9613-cb0c9728a106)
+![exc19](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/d5ffe45e-d5dd-4404-b171-062066bd69a1)
 
 - Executar o comando para testar as conexões com os bancos de dados:<br>
 
@@ -54,51 +56,65 @@ Se as conexões derem certo aparecerá a mensagem no terminal:<br>
 
 Na aba "Entry" insira os dados, como nome e propriedades a serem criados.<br>
 
-No campo "constructor" devem ser incluídas as propriedades que serão usadas como parâmetro dentro do constructor do model<br>
----constructor(as propriedades que são informadas aqui)<br>
+No campo "constructor" devem ser incluídas as propriedades que serão informadas como parâmetro dentro do constructor do model<br>
 
-No campo "fora do constructor" as demais propriedades<br>
+![exc15](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/0f095dde-d8f7-491b-a3aa-2d8d18ae044c)
 
-No campo "valor p/ constructor" os valores iniciais dessas propriedades que não são informadas como parâmetros<br>
----No exemplo da tabela o valor "CreateUuid()" - esse valor é para chamada da função que atribui uma string aleatória ao id<br>
----Quando incluído este valor ele já inclui a linha do import no próximo passo<br>
+<hr>
+1 - No campo "fora do constructor" as propriedades que serão inicializadas pela API<br>
+2 - No campo "valor inicial" os valores iniciais dessas propriedades<br>
 
+![exc16](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/a0bbf0b9-5f88-441e-b0a8-2f36a6471cd4)
+
+---No exemplo da acima o valor "createUuid()" - esse valor chama a função do "uuid" que atribui uma string aleatória ao id<br>
+---Nesta planilha, caso escolhido o valor "createUuid()", já é adicionada a linha do import ao código automaticamente<br>
+
+<hr>
 Na Tabela à esquerda (set, get) deve ser marcado com x as propriedades que terão incluídos getters e setters ao model<br>
 
-Na mesma a opção toJson deve ser marcada para as propriedades que serão ao método toJson()<br>
+![exc17](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/c52677f3-19b3-49fd-ac0a-d005caa750b6)
+
+Na mesma tabela a opção toJson deve ser marcada para as propriedades que serão ao método toJson()<br>
 ---Este método é chamado em rotas que fazem a listagem de usuários por exemplo <br>
 -neste exemplo não seria interessante incluir senha ou outra informação sensível pois esta ficaria visível a quem acessar rota de "get"<br>
 -este método também altera o visual do que é exibido, removendo as "\_" do nome das propriedades (\_id => id)<br>
 
+![exc18](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/0e92909c-f283-4328-a8b6-ee359d5c93bf)
+
 E por último a opção "PK" refere-se a propriedade que será o identificador único na tabela do banco de dados<br>
 
-No campo "Config Entity" podem ser marcados para incluir as propriedades de data de criação e atualização na tabela do banco de dados<br>
+##
+No campo "Config Entity" podem ser marcadas as opções de incluir as propriedades de data de criação e atualização na tabela do banco de dados<br>
 
 Caso haja necessidade de alterar o nome da tabela, altere no código gerado, não faça alterações nos campos automáticos da planilha pois farão com que o código gerador seja apagado.<br>
-Faça alterações somente nos campos com fundo preto da aba "Entry".
+Faça alterações somente nos campos com fundo preto da aba "Entry".<br>
+É obrigatório informar um id na primeira linha do campo "Fora do constructor", essa propriedade que será usada nos usecases de delete e update.<br>
 
-![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/b88257f6-cb07-438a-9c9b-492cd88c84eb)
+![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/10fa992d-ee26-4eff-b0b7-e529ce508653)
 
+##
 Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e colados em um arquivo ".ts"<br>
 Selecionar o campo com fundo preto do arquivo a ser copiado, pressionar CTRL+C e colar dentro de um arquivo ".ts"<br>
 À direita é gerado uma sugestão para o nome do arquivo
 
-![exc2](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/9cf0b6b5-5014-486c-8253-bc08c5a9a796)
+![exc2](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/5cf645b5-916e-49fe-95a9-639f92c72c40)
 
 - É recomendado gerar migrations sempre que uma entity é adicionada ao projeto ou alterada.<br>
+<br>
+
 Para gerar a migration execute o comando no terminal:
 
 ```
 npm run typeorm:generate src/app/shared/database/migrations/[Nome da migration]
 ```
 
-Ou se o projeto não seguir a mesma estrutura de pastas do template, mude para o caminho para a pasta que contenha as migrations:<br>
+Caso o projeto não siga a mesma estrutura de pastas do template, mude para o caminho para a pasta onde serão armazenadas as migrations:<br>
 
 ```
 npm run typeorm:generate [path]/[Nome da migration]
 ```
 
-Após gerar a migration, execute-a para manter o banco de dados de acordo com a necessidade do projeto:
+Após gerar a migration, execute-a para manter o banco de dados atualizado de acordo com as regras do projeto:
 
 ```
 npm run typeorm:run
@@ -106,8 +122,10 @@ npm run typeorm:run
 
 ## Importante!
 
+- Ambiente de testes está configurado para testes unitários e integrados( Jest/supertest ), nenhum teste é gerado automaticamente.
+
 - Redis está configurado e pronto para uso, deve ser configurado nos useCases da aplicação.
-- Jest está configurado e pronto para uso, mas nenhum teste é criado automaticamente.
+
 - JSON Web Token está configurado e pronto para uso.
 
 ##
@@ -115,7 +133,7 @@ npm run typeorm:run
 ![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/2208863b-acd0-4ebe-b393-88b2799d5866)
 
   ##
-- O Controller gerado precisa ser alterado para chamar os useCases corretos<br>
+- O Controller gerado precisará ser alterado caso não sejam usados os nomes sugeridos pela planilha, ou o projeto siga outra estrutura de pastas<br>
 ![exc6](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/9af48a1b-ff01-4ecc-bd0f-b9f0bf4a2417)
 
   ##
@@ -127,7 +145,7 @@ npm run typeorm:run
 ![exc9](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/ab29467e-b293-4554-8851-6c4086bbb4da)
 
 ##
-- Os códigos criados para useCase são apenas uma base e devem ser complementados de acordo com o projeto<br>
+- Os códigos criados para useCase são apenas uma base e devem ser complementados de acordo com as regras do projeto<br>
 Exemplo de usecase gerado com a planilha<br>
 
 ![exc14](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/5f916e3a-9094-4a2a-a71f-da5f5598baff)
