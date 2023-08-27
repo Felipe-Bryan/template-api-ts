@@ -11,7 +11,7 @@ if (process.env.DB_ENV === 'production') {
   migrations = ['build/app/shared/database/migrations/**/*.js'];
 }
 
-let config;
+let config: DataSource;
 
 if (process.env.DB_ENV === 'test') {
   config = new DataSource({
