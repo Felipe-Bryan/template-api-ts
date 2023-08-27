@@ -56,6 +56,8 @@ Se as conexões derem certo aparecerá a mensagem no terminal:<br>
 
 Na aba "Entry" insira os dados, como nome e propriedades a serem criados.<br>
 
+![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/10fa992d-ee26-4eff-b0b7-e529ce508653)
+
 No campo "constructor" devem ser incluídas as propriedades que serão informadas como parâmetro dentro do constructor do model<br>
 
 ![exc15](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/0f095dde-d8f7-491b-a3aa-2d8d18ae044c)
@@ -90,8 +92,6 @@ Caso haja necessidade de alterar o nome da tabela, altere no código gerado, nã
 Faça alterações somente nos campos com fundo preto da aba "Entry".<br>
 É obrigatório informar um id na primeira linha do campo "Fora do constructor", essa propriedade que será usada nos usecases de delete e update.<br>
 
-![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/10fa992d-ee26-4eff-b0b7-e529ce508653)
-
 ##
 Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e colados em um arquivo ".ts"<br>
 Selecionar o campo com fundo preto do arquivo a ser copiado, pressionar CTRL+C e colar dentro de um arquivo ".ts"<br>
@@ -121,14 +121,41 @@ npm run typeorm:run
 ```
 
 ## Importante!
-
-- Ambiente de testes está configurado para testes unitários e integrados( Jest/supertest ), nenhum teste é gerado automaticamente.
-
-- Redis está configurado e pronto para uso, deve ser configurado nos useCases da aplicação.
+- Redis está configurado e pronto para uso, deve ser executado nos useCases de acordo com as regras do projeto.
 
 - JSON Web Token está configurado e pronto para uso.
+<hr>
+
+- Ambiente de testes está configurado para testes unitários e integrados( Jest/supertest ), nenhum teste é gerado automaticamente.
+  Os seguintes comandos estão configurados:<br>
+  
+Deve ser o primeiro executado para criar o ambiente de testes integrados, geração do banco de dados de testes
+```
+npm run test:setup
+```
+##
+Inicia sequência de testes
+```
+npm run test
+```
+##
+Inicia sequência de testes e é executado novamente de forma automática sempre que um arquivo é salvo
+```
+npm run test:watch
+```
+##
+Inicia sequência de testes e gera um relatório com a cobertura dos testes
+```
+npm run test:coverage
+```
+##
+Inicia sequência de testes e exibe um relatório detalhado dos resultados no terminal
+```
+npm run test:verbose
+```
 
 ##
+
 - O código gerado para a entity não faz os relacionamentos, estes precisam ser configurados usando os métodos do TypeORM<br>
 ![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/2208863b-acd0-4ebe-b393-88b2799d5866)
 
