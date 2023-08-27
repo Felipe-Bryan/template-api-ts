@@ -121,14 +121,41 @@ npm run typeorm:run
 ```
 
 ## Importante!
-
-- Ambiente de testes está configurado para testes unitários e integrados( Jest/supertest ), nenhum teste é gerado automaticamente.
-
 - Redis está configurado e pronto para uso, deve ser executado nos useCases de acordo com as regras do projeto.
 
 - JSON Web Token está configurado e pronto para uso.
+<hr>
+
+- Ambiente de testes está configurado para testes unitários e integrados( Jest/supertest ), nenhum teste é gerado automaticamente.
+  Os seguintes comandos estão configurados:<br>
+  
+Deve ser o primeiro executado para criar o ambiente de testes integrados, geração do banco de dados de testes
+```
+npm run test:setup
+```
+##
+Inicia sequência de testes
+```
+npm run test
+```
+##
+Inicia sequência de testes e é executado novamente de forma automática sempre que um arquivo é salvo
+```
+npm run test:watch
+```
+##
+Inicia sequência de testes e gera um relatório com a cobertura dos testes
+```
+npm run test:coverage
+```
+##
+Inicia sequência de testes e exibe um relatório detalhado dos resultados no terminal
+```
+npm run test:verbose
+```
 
 ##
+
 - O código gerado para a entity não faz os relacionamentos, estes precisam ser configurados usando os métodos do TypeORM<br>
 ![exc7](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/2208863b-acd0-4ebe-b393-88b2799d5866)
 
