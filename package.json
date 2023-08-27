@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn --transpile-only --cls ./src/index.ts",
     "dev:debug": "ts-node-dev --inspect --respawn --transpile-only ./src/index.ts",
     "postinstall": "tsc",
@@ -14,7 +13,14 @@
     "typeorm:run": "npm run typeorm migration:run -- -d src/main/config/database.config.ts",
     "typeorm:revert": "npm run typeorm migration:revert -- -d src/main/config/database.config.ts",
     "typeorm:generate": "npm run typeorm migration:generate -- -d src/main/config/database.config.ts",
-    "start": "node ./build/index.js"
+    "start": "node ./build/index.js",
+    "test": "cross-env DB_ENV=test jest --silent --noStackTrace --runInBand",
+    "test:verbose": "cross-env DB_ENV=test jest --verbose --runInBand --detectOpenHandles",
+    "test:coverage": "cross-env DB_ENV=test jest --runInBand --coverage",
+    "test:watch": "cross-env DB_ENV=test jest --silent --noStackTrace --runInBand --watchAll",
+    "typeorm:run:test": "cross-env DB_ENV=test npm run typeorm migration:run -- -d ./src/main/config/database.config.ts",
+    "typeorm:generate:test": "cross-env DB_ENV=test npm run typeorm:generate -- tests/app/shared/database/migrations/TestMigration",
+    "test:setup": "rimraf db.sqlite3 && rimraf ./tests/app/shared/database/migrations && npm run typeorm:generate:test && npm run typeorm:run:test"
   },
   "keywords": [],
   "author": "",
