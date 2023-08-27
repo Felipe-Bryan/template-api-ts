@@ -56,6 +56,8 @@ Se as conexões derem certo aparecerá a mensagem no terminal:<br>
 
 Na aba "Entry" insira os dados, como nome e propriedades a serem criados.<br>
 
+![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/10fa992d-ee26-4eff-b0b7-e529ce508653)
+
 No campo "constructor" devem ser incluídas as propriedades que serão informadas como parâmetro dentro do constructor do model<br>
 
 ![exc15](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/0f095dde-d8f7-491b-a3aa-2d8d18ae044c)
@@ -89,8 +91,6 @@ No campo "Config Entity" podem ser marcadas as opções de incluir as propriedad
 Caso haja necessidade de alterar o nome da tabela, altere no código gerado, não faça alterações nos campos automáticos da planilha pois farão com que o código gerador seja apagado.<br>
 Faça alterações somente nos campos com fundo preto da aba "Entry".<br>
 É obrigatório informar um id na primeira linha do campo "Fora do constructor", essa propriedade que será usada nos usecases de delete e update.<br>
-
-![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/10fa992d-ee26-4eff-b0b7-e529ce508653)
 
 ##
 Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e colados em um arquivo ".ts"<br>
