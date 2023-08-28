@@ -7,7 +7,6 @@
   TypeORM<br>
   Express<br>
   Uuid<br>
-- Ferramentas configuradas:<br>
   Redis<br>
   JSON Web Token<br>
   Jest<br>
