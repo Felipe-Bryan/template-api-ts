@@ -55,9 +55,16 @@ Se as conexões derem certo aparecerá a mensagem no terminal:<br>
 ## ☕ Utilizando a planilha excel para gerar os códigos base
 
 Na aba "Entry" insira os dados, como nome e propriedades a serem criados.<br>
+Caso haja necessidade de alterar o nome da tabela, altere no código gerado, não faça alterações nos campos automáticos da planilha pois farão com que o código gerador seja apagado.<br>
+Faça alterações somente nos campos com fundo preto da aba "Entry".<br>
 
-![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/10fa992d-ee26-4eff-b0b7-e529ce508653)
 
+![exc1](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/19f484f7-6e16-45d3-821e-89a6d47e3c22)
+
+É obrigatório informar um id na primeira linha do campo "Fora do constructor", essa a propriedade será a primary key no banco de dados e será usada nos usecases de delete e update.<br>
+O nome, tipo e valor inicial da propriedade de identificação podem ser alterados<br>
+Se no projeto a propriedade de identificação tiver que ser passada pelo constructor, esta alteração deverá ser feita no código gerado.<br>
+<br>
 No campo "constructor" devem ser incluídas as propriedades que serão informadas como parâmetro dentro do constructor do model<br>
 
 ![exc15](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/0f095dde-d8f7-491b-a3aa-2d8d18ae044c)
@@ -68,7 +75,7 @@ No campo "constructor" devem ser incluídas as propriedades que serão informada
 
 ![exc16](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/a0bbf0b9-5f88-441e-b0a8-2f36a6471cd4)
 
----No exemplo da acima o valor "createUuid()" - esse valor chama a função do "uuid" que atribui uma string aleatória ao id<br>
+---No exemplo da imagem acima o valor "createUuid()" - esse valor chama a função do "uuid" que atribui uma string aleatória ao id<br>
 ---Nesta planilha, caso escolhido o valor "createUuid()", já é adicionada a linha do import ao código automaticamente<br>
 
 <hr>
@@ -83,14 +90,8 @@ Na mesma tabela a opção toJson deve ser marcada para as propriedades que serã
 
 ![exc18](https://github.com/Felipe-Bryan/template-api-ts/assets/107513634/0e92909c-f283-4328-a8b6-ee359d5c93bf)
 
-E por último a opção "PK" refere-se a propriedade que será o identificador único na tabela do banco de dados<br>
-
 ##
 No campo "Config Entity" podem ser marcadas as opções de incluir as propriedades de data de criação e atualização na tabela do banco de dados<br>
-
-Caso haja necessidade de alterar o nome da tabela, altere no código gerado, não faça alterações nos campos automáticos da planilha pois farão com que o código gerador seja apagado.<br>
-Faça alterações somente nos campos com fundo preto da aba "Entry".<br>
-É obrigatório informar um id na primeira linha do campo "Fora do constructor", essa propriedade que será usada nos usecases de delete e update.<br>
 
 ##
 Na aba "Results" serão exibidos os códigos gerados, que devem ser copiados e colados em um arquivo ".ts"<br>
