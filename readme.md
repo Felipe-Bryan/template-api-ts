@@ -2,7 +2,7 @@
 
 - Template para construção de API's<br>
 
-- Tecnologias utilizadas:<br>
+- Ferramentas utilizadas:<br>
   Typescript<br>
   TypeORM<br>
   Express<br>
